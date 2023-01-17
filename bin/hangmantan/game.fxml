@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangmantan.Game">
+   <children>
+      <Button layoutX="206.0" layoutY="558.0" mnemonicParsing="false" onAction="#defeat" prefHeight="63.0" prefWidth="432.0" text="Aku Nyerah :(" textFill="#000000">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="img" fitHeight="327.0" fitWidth="409.0" layoutX="342.0" layoutY="16.0">
+         <effect>
+            <ColorAdjust brightness="-0.04" />
+         </effect>
+      </ImageView>
+      <Label layoutX="45.0" layoutY="39.0" prefHeight="72.0" prefWidth="297.0" text="HangManTAN" textFill="#000000"
+             underline="true">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="228.0" text="Kode Darinya: " textFill="#000000" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="67.0" layoutY="381.0"  fx:id="guessedWordLabel">
+         <font>
+            <Font size="70.0" />
+         </font>
+      </Label>
+
+      <TextArea editable="false" layoutX="45.0" layoutY="124.0" prefHeight="79.0" prefWidth="297.0" text="Tekan tombol di keyboardmu dan&#10;bantu aku pecahkan kode darinya&#10;untuk lepas dari hubungan ini&#10;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="letterCount" layoutX="94.0" layoutY="312.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="incorrectLetters" text="A B C D E" layoutX="520.0" layoutY="310.0" textFill="RED">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="hint" layoutX="90.0" layoutY="270.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
